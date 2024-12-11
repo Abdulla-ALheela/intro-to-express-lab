@@ -19,10 +19,10 @@ app.get('/greetings/:username', (req, res) => {
 
 //2. Rolling the Dice
 app.get('/roll/:number', (req, res) => {
-    let number = req.params.number;
+    let number = Math.floor(Math.random() * parseFloat(req.params.number)) ;
     
         if(!isNaN(number)){
-        res.send(`<h1>You rolled a ${req.params.number}.</h1>`);
+        res.send(`<h1>You rolled a ${number}.</h1>`);
         }else{
             res.send(`<h1>You must specify a number.</h1>`);
         };
