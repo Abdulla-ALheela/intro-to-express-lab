@@ -72,7 +72,6 @@ app.get('/shoes', (req, res) => {
   
     if (minPrice !== undefined) {
         i=0
-        console.log("1");
         
         shoes.forEach(shoe => {
             if (shoe.price >= minPrice) {
